@@ -9,6 +9,9 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var flash = require('connect-flash');
+var mongo = require('mongodb');
+var assert = require('assert');
+
 
 
 var configDB = require('./config/database.js');

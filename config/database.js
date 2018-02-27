@@ -1,3 +1,3 @@
 module.exports = {
-	'url'	: 'mongodb://xxx:xxxxxxxxx@novus.modulusmongo.net:27017/yM5oryta'
+	'url'	: 'mongodb://127.0.0.1:27017/student'
 }

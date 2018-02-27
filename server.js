@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 8989;
+var port = process.env.PORT || 8991;
 
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
@@ -30,7 +30,8 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 
-
+//Create public directory for views
+app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 

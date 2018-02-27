@@ -8,7 +8,7 @@ module.exports = function(app, passport){
 		res.render('login.ejs', { message: req.flash('loginMessage') });
 	});
 	app.post('/login', passport.authenticate('local-login', {
-		successRedirect: '/profile',
+		successRedirect: '/home',
 		failureRedirect: '/login',
 		failureFlash: true
 	}));
@@ -24,6 +24,10 @@ module.exports = function(app, passport){
 		failureFlash: true
 	}));
 
+	app.get('/home', isLoggedIn, function(req, res){
+		res.render('home.ejs', { user: req.user });
+	});
+
 	app.get('/profile', isLoggedIn, function(req, res){
 		res.render('profile.ejs', { user: req.user });
 	});
@@ -31,7 +35,7 @@ module.exports = function(app, passport){
 	app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
 	app.get('/auth/facebook/callback', passport.authenticate('facebook',
-		{ successRedirect: '/profile',failureRedirect: '/' }));
+		{ successRedirect: '/home',failureRedirect: '/' }));
 
 
 	app.get('/logout', function(req, res){

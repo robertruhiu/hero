@@ -185,15 +185,15 @@
                     <div class="card mb-r">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/71.jpg" alt="Card image cap">
+                        <img class="img-fluid" src="<% {%><%= product[0].imagePath %><%}%>" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
                             <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>Card title</strong></h4>
+                            <h4 class="card-title dark-grey-text"><strong><% {%><%= product[0].title %><%}%></strong></h4>
                             <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a class="pull-left">$189</a>
+                            <p class="card-text"><% {%><%= product[0].description %><%}%>.</p>
+                            <a class="pull-left">$<% {%><%= product[0].price %><%}%></a>
                             <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
@@ -210,14 +210,15 @@
                     <div class="card mb-r">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/75.jpg" alt="Card image cap">
+                        <img class="img-fluid" src="<% {%><%= product[1].imagePath %><%}%>" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
                             <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>Card title</strong></h4>
+                            <h4 class="card-title dark-grey-text"><strong><% {%><%= product[1].title %><%}%></strong></h4>
                             <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text"><% {%><%= product[1].description %><%}%></p>
+                            <a class="pull-left">$<% {%><%= product[1].price %><%}%></a>
                             <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
@@ -234,14 +235,15 @@
                     <div class="card mb-r">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/74.jpg" alt="Card image cap">
+                        <img class="img-fluid" src="<% {%><%= product[2].imagePath %><%}%>" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
                             <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>Card title</strong></h4>
+                            <h4 class="card-title dark-grey-text"><strong><% {%><%= product[2].title %><%}%></strong></h4>
                             <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text"><% {%><%= product[2].description %><%}%></p>
+                            <a class="pull-left">$<% {%><%= product[2].price %><%}%></a>
                             <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
@@ -260,17 +262,18 @@
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
 
                     <!--Card-->
-                    <div class="card">
+                    <div class="card mb-r">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/73.jpg" alt="Card image cap">
+                        <img class="img-fluid" src="<% {%><%= product[3].imagePath %><%}%>" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
                             <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>Card title</strong></h4>
+                            <h4 class="card-title dark-grey-text"><strong><% {%><%= product[3].title %><%}%></strong></h4>
                             <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text"><% {%><%= product[3].description %><%}%></p>
+                            <a class="pull-left">$<% {%><%= product[3].price %><%}%></a>
                             <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
@@ -283,19 +286,19 @@
                 <!--Second column-->
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.4s">
 
-
                     <!--Card-->
-                    <div class="card">
+                    <div class="card mb-r">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/70.jpg" alt="Card image cap">
+                        <img class="img-fluid" src="<% {%><%= product[4].imagePath %><%}%>" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
                             <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>Card title</strong></h4>
+                            <h4 class="card-title dark-grey-text"><strong><% {%><%= product[4].title %><%}%></strong></h4>
                             <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text"><% {%><%= product[4].description %><%}%></p>
+                            <a class="pull-left">$<% {%><%= product[4].price %><%}%></a>
                             <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
@@ -306,20 +309,21 @@
                 <!--Second column-->
 
                 <!--Third column-->
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.6s">
 
                     <!--Card-->
-                    <div class="card">
+                    <div class="card mb-r">
 
                         <!--Card image-->
-                        <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/72.jpg" alt="Card image cap">
+                        <img class="img-fluid" src="<% {%><%= product[5].imagePath %><%}%>" alt="Card image cap">
 
                         <!--Card content-->
                         <div class="card-body">
                             <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>Card title</strong></h4>
+                            <h4 class="card-title dark-grey-text"><strong><% {%><%= product[5].title %><%}%></strong></h4>
                             <!--Text-->
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text"><% {%><%= product[5].description %><%}%></p>
+                            <a class="pull-left">$<% {%><%= product[5].price %><%}%></a>
                             <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
@@ -340,7 +344,7 @@
         <!--/.Main layout-->
     </main>
         </section>
-  <!--Section description-->
+        <!--Section description-->
     </div>
 
 

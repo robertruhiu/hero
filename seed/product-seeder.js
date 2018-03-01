@@ -1,6 +1,6 @@
 var Product =require('../app/models/products');
 var mongoose = require('mongoose');
-var configDB = require('./config/database.js');
+var configDB = require('../config/database.js');
 mongoose.connect(configDB.url);
 
 var products = [

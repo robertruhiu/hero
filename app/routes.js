@@ -1,7 +1,14 @@
 var User = require('./models/user');
+var Product = require('../app/models/products');
+
 module.exports = function(app, passport){
 	app.get('/', function(req, res){
-		res.render('index.ejs');
+		Product.find({},function (err,prds) {
+			res.render('index.ejs',{product:prds});
+
+        });
+
+
 	});
 
 	app.get('/login', function(req, res){

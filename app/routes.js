@@ -1,5 +1,6 @@
 var User = require('./models/user');
 var Product = require('../app/models/products');
+var Cart = require('../app/models/cart');
 
 module.exports = function(app, passport){
 	app.get('/', function(req, res){
@@ -35,8 +36,32 @@ module.exports = function(app, passport){
 		res.render('home.ejs', { user: req.user });
 	});
 
+	app.get('/add-to-cart/:id',function (req,res) {
+		var productId = req.params.id;
+		var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+
+		Product.findById(productId,function (err,product) {
+			if (err){
+				return res.redirect('/');
+			}
+			cart.add(product,product.id);
+			req.session.cart=cart;
+			console.log(req.session.cart);
+			quantity=req.session.cart.totalQty;
+			console.log(quantity);
+			return res.redirect('/')
+        });
+
+
+    });
+
 	app.get('/profile', isLoggedIn, function(req, res){
-		res.render('profile.ejs', { user: req.user });
+		Product.find({},function (err,prds) {
+			res.render('profile.ejs',{product:prds});
+
+        });
+
 	});
 
 	app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));

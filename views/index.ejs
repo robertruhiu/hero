@@ -16,21 +16,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"  rel="stylesheet"  type='text/css'>
     <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
+    <link rel="stylesheet" href="asset/style.css">
 
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg  navbar-dark scrolling-navbar" color-on-scroll=100 id="sectionsNav">
+
+    <nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
         <div class="container ">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="/">AfrikaZiara </a>
             </div>
             <div class="collapse navbar-collapse justify-content-xl-end " id="navbarNavDropdown" >
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <span class="nav-item">
                         <a class="nav-link" href="/profile">
-                            <i class="fab fa-opencart"></i> Cart</a>
-                    </li>
+                            <i class="fab fa-opencart"></i> Cart
+
+                        </a>
+                    </span>
+
                     <div class="dropdown">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-user"></i> Account</a>
@@ -194,7 +199,7 @@
                             <!--Text-->
                             <p class="card-text"><% {%><%= product[0].description %><%}%>.</p>
                             <a class="pull-left">$<% {%><%= product[0].price %><%}%></a>
-                            <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
+                            <a href="/add-to-cart/<% {%><%= product[0].id %><%}%>" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
                     </div>
@@ -219,9 +224,8 @@
                             <!--Text-->
                             <p class="card-text"><% {%><%= product[1].description %><%}%></p>
                             <a class="pull-left">$<% {%><%= product[1].price %><%}%></a>
-                            <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
+                            <a href="/add-to-cart/<% {%><%= product[1].id %><%}%>" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
-
                     </div>
                     <!--/.Card-->
 
@@ -244,7 +248,7 @@
                             <!--Text-->
                             <p class="card-text"><% {%><%= product[2].description %><%}%></p>
                             <a class="pull-left">$<% {%><%= product[2].price %><%}%></a>
-                            <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
+                            <a href="/add-to-cart/<% {%><%= product[2].id %><%}%>" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
                     </div>
@@ -274,7 +278,7 @@
                             <!--Text-->
                             <p class="card-text"><% {%><%= product[3].description %><%}%></p>
                             <a class="pull-left">$<% {%><%= product[3].price %><%}%></a>
-                            <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
+                            <a href="/add-to-cart/<% {%><%= product[3].id %><%}%>" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
                     </div>
@@ -299,7 +303,7 @@
                             <!--Text-->
                             <p class="card-text"><% {%><%= product[4].description %><%}%></p>
                             <a class="pull-left">$<% {%><%= product[4].price %><%}%></a>
-                            <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
+                            <a href="/add-to-cart/<% {%><%= product[4].id %><%}%>" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
                     </div>
@@ -324,7 +328,7 @@
                             <!--Text-->
                             <p class="card-text"><% {%><%= product[5].description %><%}%></p>
                             <a class="pull-left">$<% {%><%= product[5].price %><%}%></a>
-                            <a href="#" class="btn btn-primary btn-md pull-right">Book</a>
+                            <a href="/add-to-cart/<% {%><%= product[5].id %><%}%>" class="btn btn-primary btn-md pull-right">Book</a>
                         </div>
 
                     </div>
@@ -364,6 +368,16 @@
     <script>
         new WOW().init();
     </script>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 
 </body>
 

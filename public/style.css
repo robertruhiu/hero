@@ -53,3 +53,20 @@ body {
     text-align: left;
   }
 }
+.badge1 {
+    background-color: #6394F8;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.row1 {
+  margin-top: 700px;
+  margin-left: 300px;
+}
+

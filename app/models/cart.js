@@ -22,5 +22,4 @@ module.exports = function Cart (oldCart) {
         return arr;
         
     };
-    
 };

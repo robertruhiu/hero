@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 8993;
-
+var port = process.env.PORT || 9000;
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
@@ -11,6 +10,10 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var mongo = require('mongodb');
 var assert = require('assert');
+var expressHbs = require('express-handlebars');
+var path = require('path');
+var MongoStore = require('connect-mongo')(session);
+
 
 
 
@@ -21,19 +24,28 @@ require('./config/passport')(passport);
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(session({secret: 'anystringoftext',
-				 saveUninitialized: true,
-				 resave: true}));
+app.use(session({secret: '#tag#icui4cu#',
+	saveUninitialized: true,
+	resave: false,
+	store:new MongoStore({mongooseConnection:mongoose.connection}),
+	cookie:{maxAge:100*60*1000}
+}));
 
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Create public directory for views
-app.use(express.static('public'));
+app.engine('.hbs', expressHbs());
+app.set('view engine', '.hbs');
+app.use(function (req,res,next) {
+	res.locals.login = req.isAuthenticated();
+	res.locals.session = req.session;
+	next();
 
-app.set('view engine', 'ejs');
+});
+
 
 
 // app.use('/', function(req, res){

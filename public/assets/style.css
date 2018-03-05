@@ -69,4 +69,39 @@ body {
   margin-top: 700px;
   margin-left: 300px;
 }
+.cart {
+    margin-top: 200px;
+    width: 400px
+}
+
+.main1 {
+    background: whitesmoke;
+    position: relative;
+    z-index: 3;
+}
+
+.form-check,
+label {
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #AAAAAA;
+    font-weight: 400;
+}
+
+.main-raised {
+    margin: -230px 0px 0px;
+    border-radius: 2px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.main-raisedurban {
+    margin: -400px 10px 0px;
+    border-radius: 2px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.main-raiseaccount {
+    margin: 100px 30px 0px;
+    border-radius: 2px;
+    box-shadow: 0 16px 24px 2px rgb(253, 253, 253), 0 6px 30px 5px rgb(255, 255, 255), 0 8px 10px -5px rgb(255, 255, 255);
+}
+
 

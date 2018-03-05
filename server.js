@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
-require('./app/routes.js')(app, passport);
+
 
 
 
@@ -65,9 +65,9 @@ app.use(function (req,res,next) {
 // 	console.log(req.session);
 //  });
 
+require('./app/routes.js')(app, passport);
 
-
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 4000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 

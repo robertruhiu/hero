@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 
-
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
@@ -18,13 +17,23 @@ var MongoStore = require('connect-mongo')(session);
 
 
 
-var configDB = require('./config/database.js');
-mongoose.connect(configDB.url);
+
 require('./config/passport')(passport);
 
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
+
+
+require('./app/routes.js')(app, passport);
+
+
+
+
+
+
+var configDB = require('./config/database.js');
+mongoose.connect(configDB.url);
 app.use(session({secret: '#tag#icui4cu#',
 	saveUninitialized: true,
 	resave: false,
@@ -56,7 +65,7 @@ app.use(function (req,res,next) {
 // 	console.log(req.session);
 //  });
 
-require('./app/routes.js')(app, passport);
+
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);

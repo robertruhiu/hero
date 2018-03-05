@@ -7,81 +7,101 @@
     <title>Account</title>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/img/kit/free/apple-icon.png">
+
     <link rel="icon" href="assets/img/kit/free/favicon.png">
 
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
-    <link rel="stylesheet" href="asset/style.css">
-
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+</head>
+<body>
 <nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
         <div class="container ">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="/">AfrikaZiara </a>
             </div>
-            <div class="tabs-wrapper">
-                <ul class="nav classic-tabs tabs-cyan" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link waves-light" data-toggle="tab" href="#panel51" role="tab">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link waves-light active" data-toggle="tab" href="#panel52" role="tab">Cart</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link waves-light" data-toggle="tab" role="tab">logout</a>
-                    </li>
-
-                </ul>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto pull-right">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/profile">Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Logout</a>
+            </li>
+        </ul>
             </div>
+
 
         </div>
     </nav>
-</head>
-<body>
-    <div class="cart">
-        <div class="main1 main-raiseaccount">
-            <div class="container">
+<div class="container">
+	<table id="cart" class="table table-hover table-condensed">
+        <!-- table head no need to loop-->
+    				<thead>
+						<tr>
+							<th style="width:50%">Product</th>
+							<th style="width:20%">Price</th>
+							<th style="width:22%">Quantity</th>
+
+							<th style="width:10%"></th>
+						</tr>
+					</thead>
+        {{# if products }}
+            <tbody>
+            <!--loop here fro items-->
             {{# each products}}
-            <!--First row-->
-            <div class="row mt-5 wow">
-                <!--First column-->
-                {{# each this}}
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
-
-                    <!--Card-->
-                    <div class="card mb-r">
-
-                        <!--Card image-->
-                        <img class="img-fluid" src="{{ this.imagePath}}" alt="Card image cap">
-
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>{{ this.title}}</strong></h4>
-                            <!--Text-->
-
-                            <p class="card-text">{{ this.description}}</p>
-                            <a class="pull-left">${{ this.price}}</a>
-                            <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
+                <tr>
+                <td data-th="Product">
+                    <div class="row">
+                        <div class="col-sm-2 hidden-xs"><img class="img-fluid" src="{{ this.imagePath}}" alt="Card image cap"></div>
+                        <div class="col-sm-10">
+                            <h4 class="nomargin">{{this.title}}</h4>
+                            <p>{{this.description}}</p>
                         </div>
-
                     </div>
-                    <!--/.Card-->
+                </td>
+                <td data-th="Price">${{this.price}}</td>
+                <td data-th="Quantity">
+                    {{ this.qty}}
+                </td>
 
-                </div>
-                <!--/.First column-->
-                {{/each}}
-            </div>
-            <!--/.First row-->
+                <td class="actions" data-th="">
+                    <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                </td>
+            </tr>
+
             {{/each}}
-        </div>
+
+
+            </tbody>
+
+            <tfoot>
+
+						<tr>
+							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td class="hidden-xs text-center"><strong>{{this.totalPrice}}</strong></td>
+							<td><a href="/checkout" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+						</tr>
+					</tfoot>
+        {{else}}
+            <div class="row">
+        <div class="col-sm-6 col-md-6">
+            <h2>No items in cart</h2>
         </div>
     </div>
-</body>
+        {{/if}}
 
+				</table>
+    <!-- Default display if no items-->
+
+</div>
+
+</body>
 </html>

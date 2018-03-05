@@ -60,10 +60,13 @@ module.exports = function(app, passport){
         var cart = new Cart(req.session.cart);
 		res.render('profile.hbs',{products:cart.generateArray(),totalPrice:cart.totalPrice});
 	});
-	app.get('/logout', function(req, res){
-		req.logout();
-		res.redirect('/');
-	})
+	app.get('/checkout', isLoggedIn, function(req, res){
+		if (!req.session.cart) {
+            res.render('checkout.hbs',{products:null});
+        }
+        var cart = new Cart(req.session.cart);
+		res.render('checkout.hbs',{products:cart.generateArray(),totalPrice:cart.totalPrice});
+	});
 };
 
 function isLoggedIn(req, res, next) {

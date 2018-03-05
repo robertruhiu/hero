@@ -1,4 +1,6 @@
 var express = require('express');
+var app = express();
+var port = process.env.PORT || 8088;
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
@@ -13,7 +15,7 @@ var path = require('path');
 var MongoStore = require('connect-mongo')(session);
 
 
-var app = express();
+
 
 var configDB = require('./config/database.js');
 mongoose.connect(configDB.url);
@@ -45,7 +47,6 @@ app.use(function (req,res,next) {
 });
 
 
-var port = process.env.PORT || 8086;
 
 // app.use('/', function(req, res){
 // // 	res.send('Our First Express program!');

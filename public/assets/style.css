@@ -103,5 +103,27 @@ label {
     border-radius: 2px;
     box-shadow: 0 16px 24px 2px rgb(253, 253, 253), 0 6px 30px 5px rgb(255, 255, 255), 0 8px 10px -5px rgb(255, 255, 255);
 }
-
+.fb-livechat,.fb-widget{display:none}
+.ctrlq.fb-button,.ctrlq.fb-close{position:fixed;right:24px;cursor:pointer}
+.ctrlq.fb-button{
+    z-index:1;
+    background:url(../assets/img/kit/facebook-messenger.svg) center no-repeat rgba(251, 246, 255, 0.11);
+    width:60px;
+    height:60px;
+    text-align:center;
+    bottom:24px;
+    border:0;outline:0;
+    border-radius:60px;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;-ms-border-radius:60px;
+    -o-border-radius:60px;
+    box-shadow:0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);
+    -webkit-transition:box-shadow .2s ease;background-size:80%;transition:all .2s ease-in-out}.ctrlq.fb-button:focus,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .ctrlq.fb-button:hover{transform:scale(1.1);box-shadow:0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.24)}
+.fb-widget{background:#fff;z-index:2;position:fixed;width:360px;height:435px;overflow:hidden;opacity:0;bottom:0;right:24px;border-radius:6px;-o-border-radius:6px;-webkit-border-radius:6px;box-shadow:0 5px 40px rgba(0,0,0,.16);-webkit-box-shadow:0 5px 40px rgba(0,0,0,.16);-moz-box-shadow:0 5px 40px rgba(0,0,0,.16);-o-box-shadow:0 5px 40px rgba(0,0,0,.16)}
+.fb-credit{text-align:center;margin-top:8px}
+.fb-credit a{transition:none;color:#bec2c9;font-family:Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;border:0;font-weight:400}
+.ctrlq.fb-overlay{z-index:0;position:fixed;height:100vh;width:100vw;-webkit-transition:opacity .4s,visibility .4s;transition:opacity .4s,visibility .4s;top:0;left:0;background:rgba(0,0,0,.05);display:none}
+.ctrlq.fb-close{z-index:4;padding:0 6px;background:#365899;font-weight:700;font-size:11px;color:#fff;margin:8px;border-radius:3px}
+.ctrlq.fb-close::after{content:'x';font-family:sans-serif}
 

@@ -1022,6 +1022,13 @@ pre code {
     margin-left: -15px;
     margin-top: -190px;
 }
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 400px;
+}
 
 .no-gutters {
     margin-right: 0;
@@ -7503,7 +7510,7 @@ button.bg-dark:focus {
 
 .pb-3,
 .py-3 {
-    padding-bottom: 5rem !important;
+    padding-bottom: 0rem !important;
 }
 
 .pl-3,

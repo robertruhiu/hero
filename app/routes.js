@@ -28,6 +28,65 @@ module.exports = function(app, passport){
 		res.render('signup.hbs');
 	});
 
+	app.get('/relaxation', function(req, res){
+		Product.find({},function (err,docs) {
+			var productChunks = [];
+			var chunkSize =3;
+			for (var i=0;i<docs.length;i+=chunkSize ){
+				productChunks.push(docs.slice(i,i+chunkSize));
+			}
+			res.render('relaxation.hbs',{products:productChunks});
+        });
+	});
+
+
+	app.get('/urban', function(req, res){
+		Product.find({},function (err,docs) {
+			var productChunks = [];
+			var chunkSize =3;
+			for (var i=0;i<docs.length;i+=chunkSize ){
+				productChunks.push(docs.slice(i,i+chunkSize));
+			}
+			res.render('urban.hbs',{products:productChunks});
+        });
+	});
+
+
+	app.get('/adventure', function(req, res){
+		Product.find({},function (err,docs) {
+			var productChunks = [];
+			var chunkSize =3;
+			for (var i=0;i<docs.length;i+=chunkSize ){
+				productChunks.push(docs.slice(i,i+chunkSize));
+			}
+			res.render('adventure.hbs',{products:productChunks});
+        });
+	});
+
+
+	app.get('/extreeme', function(req, res){
+		Product.find({},function (err,docs) {
+			var productChunks = [];
+			var chunkSize =3;
+			for (var i=0;i<docs.length;i+=chunkSize ){
+				productChunks.push(docs.slice(i,i+chunkSize));
+			}
+			res.render('extreeme.hbs',{products:productChunks});
+        });
+	});
+
+
+	app.get('/night', function(req, res){
+		Product.find({},function (err,docs) {
+			var productChunks = [];
+			var chunkSize =3;
+			for (var i=0;i<docs.length;i+=chunkSize ){
+				productChunks.push(docs.slice(i,i+chunkSize));
+			}
+			res.render('night.hbs',{products:productChunks});
+        });
+	});
+
 
 	app.post('/signup', passport.authenticate('local-signup', {
 		successRedirect: '/',

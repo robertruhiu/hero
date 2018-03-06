@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>adventure</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/kit/free/apple-icon.png">
+    <link rel="icon" href="assets/img/kit/free/favicon.png">
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
+
+
+    <nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
+        <div class="container ">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="/">AfrikaZiara </a>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-xl-end " id="navbarNavDropdown" >
+
+                <ul class="navbar-nav">
+                    <div class="nav-item">
+                        <a class="nav-link"  href="/profile">
+                            Cart
+                            {{session.cart.totalQty}}
+                        </a>
+
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Account
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="/login">login</a>
+                            <a class="dropdown-item" href="/signup">sign up</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+</head>
+
+<body>
+
+    <div class="page-header header-filter" data-parallax="true" style=" background-image: url('assets/img/kit/adventure.jpg'); ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6urban">
+                    <h1 class="title">Adventure Junkies</h1>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="main main-raisedurban">
+            <div class="container">
+            {{# each products}}
+            <!--First row-->
+            <div class="row mt-5 wow">
+                <!--First column-->
+                {{# each this}}
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+
+                    <!--Card-->
+                    <div class="card mb-r">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="{{ this.imagePath}}" alt="Card image cap">
+
+                        <!--Card content-->
+                        <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title dark-grey-text"><strong>{{ this.title}}</strong></h4>
+                            <!--Text-->
+
+                            <p class="card-text">{{ this.description}}</p>
+                            <a class="pull-left">${{ this.price}}</a>
+                            <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card-->
+
+                </div>
+                <!--/.First column-->
+                {{/each}}
+            </div>
+            <!--/.First row-->
+            {{/each}}
+        </div>
+
+    </main>
+
+
+        </div>
+
+
+
+
+
+<script type="text/javascript" src="3/js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="3/js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="3/js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="3/js/mdb.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

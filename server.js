@@ -15,9 +15,6 @@ var path = require('path');
 var MongoStore = require('connect-mongo')(session);
 
 
-
-
-
 require('./config/passport')(passport);
 
 app.use(morgan('dev'));
@@ -25,20 +22,14 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
-
-
-
-
-
-
-
 var configDB = require('./config/database.js');
 mongoose.connect(configDB.url);
-app.use(session({secret: '#tag#icui4cu#',
-	saveUninitialized: true,
-	resave: false,
-	store:new MongoStore({mongooseConnection:mongoose.connection}),
-	cookie:{maxAge:100*60*1000}
+app.use(session({
+    secret: '#tag#icui4cu#',
+    saveUninitialized: true,
+    resave: false,
+    store: new MongoStore({mongooseConnection: mongoose.connection}),
+    cookie: {maxAge: 100 * 60 * 1000}
 }));
 
 app.use(passport.initialize());
@@ -49,13 +40,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Create public directory for views
 app.engine('.hbs', expressHbs());
 app.set('view engine', '.hbs');
-app.use(function (req,res,next) {
-	res.locals.login = req.isAuthenticated();
-	res.locals.session = req.session;
-	next();
+app.use(function (req, res, next) {
+    res.locals.login = req.isAuthenticated();
+    res.locals.session = req.session;
+    next();
 
 });
-
 
 
 // app.use('/', function(req, res){
@@ -67,8 +57,8 @@ app.use(function (req,res,next) {
 
 require('./app/routes.js')(app, passport);
 
-app.listen(process.env.PORT || 4000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+app.listen(process.env.PORT || 4000, function () {
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 

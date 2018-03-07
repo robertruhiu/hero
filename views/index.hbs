@@ -12,358 +12,301 @@
     <link rel="icon" href="assets/img/kit/free/favicon.png">
 
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"  rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+          type='text/css'>
     <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
-    <link rel="stylesheet" href="asset/style.css">
+
 
 
 </head>
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
-        <div class="container ">
-            <div class="navbar-translate">
-                <a class="navbar-brand" href="/">AfrikaZiara </a>
-            </div>
-
-            <div class="collapse navbar-collapse justify-content-xl-end " id="navbarNavDropdown" >
-
-                <ul class="navbar-nav">
-                    <div class="nav-item">
-                        <a class="nav-link"  href="/profile">
-                            Cart
-                            {{session.cart.totalQty}}
-                        </a>
-
-                    </div>
-                    <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             Account
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="/login">login</a>
-                            <a class="dropdown-item" href="/signup">sign up</a>
-                        </div>
-                    </div>
-
-                </ul>
-            </div>
-
+<nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
+    <div class="container ">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">AfrikaZiara </a>
         </div>
-    </nav>
 
+        <div class="collapse navbar-collapse justify-content-xl-end " id="navbarNavDropdown">
 
-    <div class="page-header header-filter" data-parallax="true" style=" background-image: url('assets/img/kit/34.jpg'); ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="title">Your Story Starts With Us.</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="main main-raised">
-        <div class="card-group">
-            <div class="card mb-4">
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <a href="/relaxation">
-                            <img class="img-fluid" src="https://c.pxhere.com/photos/6c/9e/bali_beach_parasol_sand_sea_water_chair_nature-998940.jpg!d" alt="Card image cap">
-
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-        </div>
-                        <!--Card image-->
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title">Relaxation</h4>
-                            <a href="/relaxation">
-                            <button type="button" class="btn btn-primary btn-md">Read more</button>
-                                </a>
-                        </div>
-                        <!--Card content-->
-                    </div>
-            <div class="card mb-4">
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <a href="/urban">
-                            <img class="img-fluid" src="https://www.urbanadventures.com/data/0/custom_10175/c-fakepath-webimage-fd725e94-e353-49ab-b3374c5fc4379612.png" alt="Card image cap">
-
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                            <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title">Urban adventures</h4>
-                                <a href="/urban">
-                            <button type="button" class="btn btn-primary btn-md">Read more</button>
-                                </a>
-                        </div>
-                        </div>
-
-                    </div>
-            <div class="card mb-4">
-
-        <!--Card image-->
-        <div class="view overlay">
-            <a href="/adventure">
-            <img class="img-fluid" src="https://buzzbud.in/wp-content/uploads/2017/11/forclaz-hiking-backpack-50-l-light-grey-600x490.jpg" alt="Card image cap">
-
-                <div class="mask rgba-white-slight"></div>
-            </a>
-        </div>
-        <!--Card image-->
-
-        <!--Card content-->
-        <div class="card-body">
-            <!--Title-->
-            <h4 class="card-title">Adventure junkies</h4>
-
-            <a href="/adventure">
-            <button type="button" class="btn btn-primary btn-md">Read more</button>
-            </a>
-        </div>
-        <!--Card content-->
-
-    </div>
-            <div class="card mb-4">
-
-        <!--Card image-->
-        <div class="view overlay">
-            <a href="/extreeme">
-            <img class="img-fluid" src="http://www.coupondunia.in/blog/wp-content/uploads/2013/12/Bungee_Jumping-1-1050x591.jpeg" alt="Card image cap">
-
-                <div class="mask rgba-white-slight"></div>
-            </a>
-        </div>
-        <!--Card image-->
-
-        <!--Card content-->
-        <div class="card-body">
-            <!--Title-->
-            <h4 class="card-title">Extreme adventures</h4>
-
-            <a href="/extreeme">
-                <button type="button" class="btn btn-primary btn-md">Read more</button>
-            </a>
-        </div>
-        <!--Card content-->
-
-    </div>
-            <div class="card mb-4">
-                        <!--Card image-->
-                        <div class="view overlay">
-                            <a href="/night">
-                                <img class="img-fluid" src="http://beautifulindia.info/wp-content/uploads/2016/11/night-life.jpg" alt="Card image cap">
-                            </a>
-                            <div class="mask rgba-white-slight"></div>
-                        </div>
-                        <!--Card image-->
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title">Night life</h4>
-                            <a href="night.html">
-                            <a href="/night">
-                            <button type="button" class="btn btn-primary btn-md">Read more</button>
-                            </a>
-                            </a>
-                        </div>
-                        <!--Card content-->
-                    </div>
-        </div>
-<section class="text-center pb-3 my-5">
-            <!--Section heading-->
-            <h1 class="h1">Our bestsellers</h1>
-             <main>
-        <!--Main layout-->
-        <div class="container">
-            {{# each products}}
-            <!--First row-->
-            <div class="row mt-5 wow">
-                <!--First column-->
-                {{# each this}}
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
-
-                    <!--Card-->
-                    <div class="card mb-r">
-
-                        <!--Card image-->
-                        <img class="img-fluid" src="{{ this.imagePath}}" alt="Card image cap">
-
-                        <!--Card content-->
-                        <div class="card-body">
-                            <!--Title-->
-                            <h4 class="card-title dark-grey-text"><strong>{{ this.title}}</strong></h4>
-                            <!--Text-->
-
-                            <p class="card-text">{{ this.description}}</p>
-                            <a class="pull-left">${{ this.price}}</a>
-                            <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
-                        </div>
-
-                    </div>
-                    <!--/.Card-->
+            <ul class="navbar-nav">
+                <div class="nav-item">
+                    <a class="nav-link" href="/profile">
+                        Cart
+                        {{session.cart.totalQty}}
+                    </a>
 
                 </div>
-                <!--/.First column-->
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Account
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/login">login</a>
+                        <a class="dropdown-item" href="/signup">sign up</a>
+                    </div>
+                </div>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="page-header header-filter" data-parallax="true" style=" background-image: url('assets/img/kit/34.jpg'); ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="title">Your Story Starts With Us.</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main main-raised">
+    <div class="card-group">
+        <div class="card mb-4">
+            <!--Card image-->
+            <div class="view overlay">
+                <a href="/relaxation">
+                    <img class="img-fluid"
+                         src="https://c.pxhere.com/photos/6c/9e/bali_beach_parasol_sand_sea_water_chair_nature-998940.jpg!d"
+                         alt="Card image cap">
+
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--Card image-->
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title">Relaxation</h4>
+                <a href="/relaxation">
+                    <button type="button" class="btn btn-primary btn-md">Read more</button>
+                </a>
+            </div>
+            <!--Card content-->
+        </div>
+        <div class="card mb-4">
+            <!--Card image-->
+            <div class="view overlay">
+                <a href="/urban">
+                    <img class="img-fluid"
+                         src="https://www.urbanadventures.com/data/0/custom_10175/c-fakepath-webimage-fd725e94-e353-49ab-b3374c5fc4379612.png"
+                         alt="Card image cap">
+
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+                <div class="card-body">
+                    <!--Title-->
+                    <h4 class="card-title">Urban adventures</h4>
+                    <a href="/urban">
+                        <button type="button" class="btn btn-primary btn-md">Read more</button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="card mb-4">
+
+            <!--Card image-->
+            <div class="view overlay">
+                <a href="/adventure">
+                    <img class="img-fluid"
+                         src="https://buzzbud.in/wp-content/uploads/2017/11/forclaz-hiking-backpack-50-l-light-grey-600x490.jpg"
+                         alt="Card image cap">
+
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--Card image-->
+
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title">Adventure junkies</h4>
+
+                <a href="/adventure">
+                    <button type="button" class="btn btn-primary btn-md">Read more</button>
+                </a>
+            </div>
+            <!--Card content-->
+
+        </div>
+        <div class="card mb-4">
+
+            <!--Card image-->
+            <div class="view overlay">
+                <a href="/extreeme">
+                    <img class="img-fluid"
+                         src="http://www.coupondunia.in/blog/wp-content/uploads/2013/12/Bungee_Jumping-1-1050x591.jpeg"
+                         alt="Card image cap">
+
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!--Card image-->
+
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title">Extreme adventures</h4>
+
+                <a href="/extreeme">
+                    <button type="button" class="btn btn-primary btn-md">Read more</button>
+                </a>
+            </div>
+            <!--Card content-->
+
+        </div>
+        <div class="card mb-4">
+            <!--Card image-->
+            <div class="view overlay">
+                <a href="/night">
+                    <img class="img-fluid" src="http://beautifulindia.info/wp-content/uploads/2016/11/night-life.jpg"
+                         alt="Card image cap">
+                </a>
+                <div class="mask rgba-white-slight"></div>
+            </div>
+            <!--Card image-->
+            <!--Card content-->
+            <div class="card-body">
+                <!--Title-->
+                <h4 class="card-title">Night life</h4>
+                <a href="night.html">
+                    <a href="/night">
+                        <button type="button" class="btn btn-primary btn-md">Read more</button>
+                    </a>
+                </a>
+            </div>
+            <!--Card content-->
+        </div>
+    </div>
+    <section class="text-center pb-3 my-5">
+        <!--Section heading-->
+        <h1 class="h1">Our bestsellers</h1>
+        <main>
+            <!--Main layout-->
+            <div class="container">
+                {{# each products}}
+                    <!--First row-->
+                    <div class="row mt-5 wow">
+                        <!--First column-->
+                        {{# each this}}
+                            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+
+                                <!--Card-->
+                                <div class="card mb-r">
+
+                                    <!--Card image-->
+                                    <img class="img-fluid" src="{{ this.imagePath}}" alt="Card image cap">
+
+                                    <!--Card content-->
+                                    <div class="card-body">
+                                        <!--Title-->
+                                        <h4 class="card-title dark-grey-text"><strong>{{ this.title}}</strong></h4>
+                                        <!--Text-->
+
+                                        <p class="card-text">{{ this.description}}</p>
+                                        <a class="pull-left">${{ this.price}}</a>
+                                        <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
+                                    </div>
+
+                                </div>
+                                <!--/.Card-->
+
+                            </div>
+                            <!--/.First column-->
+                        {{/each}}
+                    </div>
+                    <!--/.First row-->
                 {{/each}}
             </div>
-            <!--/.First row-->
-            {{/each}}
+        </main>
+    </section>
+    <!--tour operators-->
+    <section class="text-center pb-3 my-5">
+        <!--Section heading-->
+        <h2 class="h2">Tour operators</h2>
+        <div class="card-group">
+
+            <div class="card mb-4">
+                <!--Card image-->
+                <div class="view overlay">
+                    <img class="img-fluid"
+                         src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/maldives-country-brand-logo.jpg"
+                         alt="Card image cap">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <!--Card image-->
+                <div class="view overlay">
+                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/Logo.png"
+                         alt="Card image cap">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <!--Card image-->
+                <div class="view overlay">
+                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/download.jpeg"
+                         alt="Card image cap">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <!--Card image-->
+                <div class="view overlay">
+                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/secure-traves.jpg"
+                         alt="Card image cap">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <!--Card image-->
+                <div class="view overlay">
+                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/golden-1.jpg"
+                         alt="Card image cap">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+            </div>
         </div>
-             </main>
-        </section>
-        <!--tour operators-->
-<section class="text-center pb-3 my-5">
-            <!--Section heading-->
-            <h2 class="h2">Tour operators</h2>
-            <div class="card-group">
+        <!-- End Container Start -->
+    </section>
 
-                <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/maldives-country-brand-logo.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-            </div>
-                <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/Logo.png" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-            </div>
-                <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/download.jpeg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-            </div>
-                <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/secure-traves.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-            </div>
-                <div class="card mb-4">
-                <!--Card image-->
-                <div class="view overlay">
-                    <img class="img-fluid" src="http://az.bodyslim.co.ke/wp-content/uploads/2018/02/golden-1.jpg" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-            </div>
-            </div>
-            <!-- End Container Start -->
-        </section>
-        <!-- facebook messanger-->
-<section>
-    <style>.fb-livechat,
-.fb-widget{display:none}
-.ctrlq.fb-button,.ctrlq.fb-close{position:fixed;right:24px;cursor:pointer}
-.ctrlq.fb-button{
-    z-index:1;
-    background:url(../assets/img/kit/facebook-messenger.svg) center no-repeat rgba(251, 246, 255, 0.11);
-    width:60px;
-    height:60px;
-    text-align:center;
-    bottom:24px;
-    border:0;outline:0;
-    border-radius:60px;
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;-ms-border-radius:60px;
-    -o-border-radius:60px;
-    box-shadow:0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);
-    -webkit-transition:box-shadow .2s ease;background-size:80%;transition:all .2s ease-in-out}.ctrlq.fb-button:focus,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            .ctrlq.fb-button:hover{transform:scale(1.1);box-shadow:0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.24)}
-.fb-widget{background:#fff;z-index:2;position:fixed;width:360px;height:435px;overflow:hidden;opacity:0;bottom:0;right:24px;border-radius:6px;-o-border-radius:6px;-webkit-border-radius:6px;box-shadow:0 5px 40px rgba(0,0,0,.16);-webkit-box-shadow:0 5px 40px rgba(0,0,0,.16);-moz-box-shadow:0 5px 40px rgba(0,0,0,.16);-o-box-shadow:0 5px 40px rgba(0,0,0,.16)}
-.fb-credit{text-align:center;margin-top:8px}
-.fb-credit a{transition:none;color:#bec2c9;font-family:Helvetica,Arial,sans-serif;font-size:12px;text-decoration:none;border:0;font-weight:400}
-.ctrlq.fb-overlay{z-index:0;position:fixed;height:100vh;width:100vw;-webkit-transition:opacity .4s,visibility .4s;transition:opacity .4s,visibility .4s;top:0;left:0;background:rgba(0,0,0,.05);display:none}
-.ctrlq.fb-close{z-index:4;padding:0 6px;background:#365899;font-weight:700;font-size:11px;color:#fff;margin:8px;border-radius:3px}
-.ctrlq.fb-close::after{content:'x';font-family:sans-serif}
-</style>
-
-<div class="fb-livechat">
-  <div class="ctrlq fb-overlay"></div>
-  <div class="fb-widget">
-    <div class="ctrlq fb-close"></div>
-    <div class="fb-page" data-href="https://www.facebook.com/ziarafrica/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false">
-      <blockquote cite="https://www.facebook.com/ziarafrica/" class="fb-xfbml-parse-ignore"> </blockquote>
-    </div>
-    <div class="fb-credit">
-      <a href="https://www.labnol.org/software/facebook-messenger-chat-widget/9583/" target="_blank">Facebook Chat Widget by Ziarafrica/a>
-    </div>
-    <div id="fb-root"></div>
-  </div>
-  <a class="ctrlq fb-button"></a>
 </div>
-</section>
-    </div>
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="3/js/jquery-3.1.1.min.js"></script>
-
-    <!-- Bootstrap dropdown -->
-    <script type="text/javascript" src="3/js/popper.min.js"></script>
-
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="3/js/bootstrap.min.js"></script>
-
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="3/js/mdb.min.js"></script>
 
 
 
 
 <script>
-        new WOW().init();
-    </script>
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+    new WOW().init();
 </script>
-<script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>$(document).ready(function(){var t={delay:125,overlay:$(".fb-overlay"),
-    widget:$(".fb-widget"),
-    button:$(".fb-button")};setTimeout(function(){$("div.fb-livechat").fadeIn()},
-    8*t.delay),$(".ctrlq").on("click",function(e){e.preventDefault(),
-    t.overlay.is(":visible")?(t.overlay.fadeOut(t.delay),
-        t.widget.stop().animate({bottom:0,opacity:0},
-            2*t.delay,function(){$(this).hide("slow"),
-                t.button.show()})):t.button.fadeOut("medium",function(){t.widget.stop().show().animate({bottom:"30px",opacity:1},
-        2*t.delay),
-        t.overlay.fadeIn(t.delay)})})});
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
 </script>
 
 </body>

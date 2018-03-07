@@ -13,7 +13,7 @@
 
 var big_image;
 
-$(document).ready(function() {
+$(document).ready(function () {
     BrowserDetect.init();
 
     // Init Material scripts for buttons ripples, inputs animations etc, more info on the next link https://github.com/FezVrasta/bootstrap-material-design#materialjs
@@ -31,21 +31,21 @@ $(document).ready(function() {
 
 
     // FileInput
-    $('.form-file-simple .inputFileVisible').click(function() {
+    $('.form-file-simple .inputFileVisible').click(function () {
         $(this).siblings('.inputFileHidden').trigger('click');
     });
 
-    $('.form-file-simple .inputFileHidden').change(function() {
+    $('.form-file-simple .inputFileHidden').change(function () {
         var filename = $(this).val().replace(/C:\\fakepath\\/i, '');
         $(this).siblings('.inputFileVisible').val(filename);
     });
 
-    $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function() {
+    $('.form-file-multiple .inputFileVisible, .form-file-multiple .input-group-btn').click(function () {
         $(this).parent().parent().find('.inputFileHidden').trigger('click');
         $(this).parent().parent().addClass('is-focused');
     });
 
-    $('.form-file-multiple .inputFileHidden').change(function() {
+    $('.form-file-multiple .inputFileHidden').change(function () {
         var names = '';
         for (var i = 0; i < $(this).get(0).files.length; ++i) {
             if (i < $(this).get(0).files.length - 1) {
@@ -57,11 +57,11 @@ $(document).ready(function() {
         $(this).siblings('.input-group').find('.inputFileVisible').val(names);
     });
 
-    $('.form-file-multiple .btn').on('focus', function() {
+    $('.form-file-multiple .btn').on('focus', function () {
         $(this).parent().siblings().trigger('focus');
     });
 
-    $('.form-file-multiple .btn').on('focusout', function() {
+    $('.form-file-multiple .btn').on('focusout', function () {
         $(this).parent().siblings().trigger('focusout');
     });
 
@@ -103,7 +103,7 @@ $(document).ready(function() {
     }
 });
 
-$(window).on("load", function() {
+$(window).on("load", function () {
     //initialise rotating cards
     materialKit.initRotateCard();
 
@@ -111,7 +111,7 @@ $(window).on("load", function() {
     materialKit.initColoredShadows();
 });
 
-$(document).on('click', '.card-rotate .btn-rotate', function() {
+$(document).on('click', '.card-rotate .btn-rotate', function () {
     var $rotating_card_container = $(this).closest('.rotating-card-container');
 
     if ($rotating_card_container.hasClass('hover')) {
@@ -121,26 +121,26 @@ $(document).on('click', '.card-rotate .btn-rotate', function() {
     }
 });
 
-$(document).on('click', '.navbar-toggler', function() {
+$(document).on('click', '.navbar-toggler', function () {
     $toggle = $(this);
 
     if (materialKit.misc.navbar_menu_visible == 1) {
         $('html').removeClass('nav-open');
         materialKit.misc.navbar_menu_visible = 0;
         $('#bodyClick').remove();
-        setTimeout(function() {
+        setTimeout(function () {
             $toggle.removeClass('toggled');
         }, 550);
 
         $('html').removeClass('nav-open-absolute');
     } else {
-        setTimeout(function() {
+        setTimeout(function () {
             $toggle.addClass('toggled');
         }, 580);
 
 
         div = '<div id="bodyClick"></div>';
-        $(div).appendTo("body").click(function() {
+        $(div).appendTo("body").click(function () {
             $('html').removeClass('nav-open');
 
             if ($('nav').hasClass('navbar-absolute')) {
@@ -148,7 +148,7 @@ $(document).on('click', '.navbar-toggler', function() {
             }
             materialKit.misc.navbar_menu_visible = 0;
             $('#bodyClick').remove();
-            setTimeout(function() {
+            setTimeout(function () {
                 $toggle.removeClass('toggled');
             }, 550);
         });
@@ -162,7 +162,7 @@ $(document).on('click', '.navbar-toggler', function() {
     }
 });
 
-$(window).on('resize', function() {
+$(window).on('resize', function () {
     materialKit.initRotateCard();
 });
 
@@ -177,7 +177,7 @@ materialKit = {
         isWindow: document.documentMode || /Edge/.test(navigator.userAgent)
     },
 
-    checkScrollForParallax: function() {
+    checkScrollForParallax: function () {
         oVal = ($(window).scrollTop() / 3);
         big_image.css({
             'transform': 'translate3d(0,' + oVal + 'px,0)',
@@ -187,7 +187,7 @@ materialKit = {
         });
     },
 
-    initFormExtendedDatetimepickers: function() {
+    initFormExtendedDatetimepickers: function () {
         $('.datetimepicker').datetimepicker({
             icons: {
                 time: "fa fa-clock-o",
@@ -236,7 +236,7 @@ materialKit = {
     },
 
 
-    initSliders: function() {
+    initSliders: function () {
         // Sliders for demo purpose
         var slider = document.getElementById('sliderRegular');
 
@@ -262,10 +262,10 @@ materialKit = {
     },
 
 
-    initColoredShadows: function() {
+    initColoredShadows: function () {
         if (materialKit.misc.colored_shadows == true) {
             if (!(BrowserDetect.browser == 'Explorer' && BrowserDetect.version <= 12)) {
-                $('.card:not([data-colored-shadow="false"]) .card-header-image').each(function() {
+                $('.card:not([data-colored-shadow="false"]) .card-header-image').each(function () {
                     $card_img = $(this);
 
                     is_on_dark_screen = $(this).closest('.section-dark, .section-image').length;
@@ -297,7 +297,7 @@ materialKit = {
                             colored_shadow_div.addClass('colored-shadow-big');
                         }
 
-                        setTimeout(function() {
+                        setTimeout(function () {
                             colored_shadow_div.css('opacity', 1);
                         }, 200);
                     }
@@ -307,8 +307,8 @@ materialKit = {
         }
     },
 
-    initRotateCard: debounce(function() {
-        $('.rotating-card-container .card-rotate').each(function() {
+    initRotateCard: debounce(function () {
+        $('.rotating-card-container .card-rotate').each(function () {
             var $this = $(this);
 
             var card_width = $(this).parent().width();
@@ -331,7 +331,7 @@ materialKit = {
         });
     }, 50),
 
-    checkScrollForTransparentNavbar: debounce(function() {
+    checkScrollForTransparentNavbar: debounce(function () {
         if ($(document).scrollTop() > scroll_distance) {
             if (materialKit.misc.transparent) {
                 materialKit.misc.transparent = false;
@@ -352,11 +352,11 @@ materialKit = {
 
 function debounce(func, wait, immediate) {
     var timeout;
-    return function() {
+    return function () {
         var context = this,
             args = arguments;
         clearTimeout(timeout);
-        timeout = setTimeout(function() {
+        timeout = setTimeout(function () {
             timeout = null;
             if (!immediate) func.apply(context, args);
         }, wait);
@@ -365,11 +365,11 @@ function debounce(func, wait, immediate) {
 }
 
 var BrowserDetect = {
-    init: function() {
+    init: function () {
         this.browser = this.searchString(this.dataBrowser) || "Other";
         this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
     },
-    searchString: function(data) {
+    searchString: function (data) {
         for (var i = 0; i < data.length; i++) {
             var dataString = data[i].string;
             this.versionSearchString = data[i].subString;
@@ -379,7 +379,7 @@ var BrowserDetect = {
             }
         }
     },
-    searchVersion: function(dataString) {
+    searchVersion: function (dataString) {
         var index = dataString.indexOf(this.versionSearchString);
         if (index === -1) {
             return;
@@ -394,10 +394,10 @@ var BrowserDetect = {
     },
 
     dataBrowser: [{
-            string: navigator.userAgent,
-            subString: "Chrome",
-            identity: "Chrome"
-        },
+        string: navigator.userAgent,
+        subString: "Chrome",
+        identity: "Chrome"
+    },
         {
             string: navigator.userAgent,
             subString: "MSIE",

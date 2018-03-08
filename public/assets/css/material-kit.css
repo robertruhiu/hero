@@ -18451,6 +18451,9 @@ footer .pull-center {
     font-family: sans-serif
 }
 
+.boxed {
+  border: 1px solid green ;
+}
 
 
 /*# sourceMappingURL=material-kit.css.map */

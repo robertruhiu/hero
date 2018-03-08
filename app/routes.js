@@ -5,6 +5,7 @@ var Night = require('../app/models/night');
 var Relaxation = require('../app/models/relaxation');
 var Urban = require('../app/models/urban');
 var Adventure = require('../app/models/adventure');
+var Order =require('../app/models/orders');
 
 module.exports = function (app, passport) {
 
@@ -195,6 +196,22 @@ module.exports = function (app, passport) {
         }
         var cart = new Cart(req.session.cart);
         res.render('checkout.hbs', {products: cart.generateArray(), totalPrice: cart.totalPrice});
+    });
+    app.post('/checkout',isLoggedIn, function (req,res) {
+        var cart = new Cart(req.session.cart ? req.session.cart : {});
+        var order =new Order({
+            cart:cart,
+            address:req.body.address,
+            username:req.body.username
+        });
+        order.save(function (err,result) {
+            req.flash('success','Successfully bought product');
+            req.session.cart=null;
+            res.redirect('/')
+            
+        })
+
+
     });
 
 };

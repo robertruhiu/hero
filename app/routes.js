@@ -109,7 +109,8 @@ module.exports = function (app, passport) {
     app.get('/add-to-cart/:id', function (req, res) {
         var productId = req.params.id;
         var cart = new Cart(req.session.cart ? req.session.cart : {});
-        Product.findById(productId, function (err, product) {
+
+        Ofinterest.findById(productId, function (err, product) {
             if (err) {
                 return res.redirect('/');
             }
@@ -118,6 +119,67 @@ module.exports = function (app, passport) {
             console.log(cart);
             res.redirect('/');
         });
+
+    });
+    app.get('/adventure/add-to-cart/:id', function (req, res) {
+        var productId = req.params.id;
+        var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+        Adventure.findById(productId, function (err, product) {
+            if (err) {
+                return res.redirect('/');
+            }
+            cart.add(product, product.id);
+            req.session.cart = cart;
+            console.log(cart);
+            res.redirect('/');
+        });
+
+    });
+    app.get('/urban/add-to-cart/:id', function (req, res) {
+        var productId = req.params.id;
+        var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+        Urban.findById(productId, function (err, product) {
+            if (err) {
+                return res.redirect('/');
+            }
+            cart.add(product, product.id);
+            req.session.cart = cart;
+            console.log(cart);
+            res.redirect('/');
+        });
+
+    });
+    app.get('/relaxation/add-to-cart/:id', function (req, res) {
+        var productId = req.params.id;
+        var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+        Relaxation.findById(productId, function (err, product) {
+            if (err) {
+                return res.redirect('/');
+            }
+            cart.add(product, product.id);
+            req.session.cart = cart;
+            console.log(cart);
+            res.redirect('/');
+        });
+
+    });
+    app.get('/night/add-to-cart/:id', function (req, res) {
+        var productId = req.params.id;
+        var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+        Night.findById(productId, function (err, product) {
+            if (err) {
+                return res.redirect('/');
+            }
+            cart.add(product, product.id);
+            req.session.cart = cart;
+            console.log(cart);
+            res.redirect('/');
+        });
+
     });
 
     app.get('/profile', isLoggedIn, function (req, res) {

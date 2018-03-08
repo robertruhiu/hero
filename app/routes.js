@@ -23,6 +23,7 @@ module.exports = function (app, passport) {
     app.get('/login', function (req, res) {
         res.render('login.hbs', {message: req.flash('loginMessage')});
     });
+
     app.post('/login', passport.authenticate('local-login', {
         successRedirect: '/',
         failureRedirect: '/login',
@@ -99,11 +100,9 @@ module.exports = function (app, passport) {
         failureFlash: true
     }));
 
-    app.get('/home', isLoggedIn, function (req, res) {
-        res.render('home.hbs', {user: req.user});
-    });
 
-    app.get('/operator-profile', isLoggedIn, function (req, res) {
+
+    app.get('/operator-profile',function (req, res) {
         res.render('operator-profile.hbs');
     });
 
@@ -122,6 +121,7 @@ module.exports = function (app, passport) {
         });
 
     });
+
     app.get('/adventure/add-to-cart/:id', function (req, res) {
         var productId = req.params.id;
         var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -133,10 +133,11 @@ module.exports = function (app, passport) {
             cart.add(product, product.id);
             req.session.cart = cart;
             console.log(cart);
-            res.redirect('/');
+            res.redirect('/adventure');
         });
 
     });
+
     app.get('/urban/add-to-cart/:id', function (req, res) {
         var productId = req.params.id;
         var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -148,10 +149,11 @@ module.exports = function (app, passport) {
             cart.add(product, product.id);
             req.session.cart = cart;
             console.log(cart);
-            res.redirect('/');
+            res.redirect('/urban');
         });
 
     });
+
     app.get('/relaxation/add-to-cart/:id', function (req, res) {
         var productId = req.params.id;
         var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -163,10 +165,11 @@ module.exports = function (app, passport) {
             cart.add(product, product.id);
             req.session.cart = cart;
             console.log(cart);
-            res.redirect('/');
+            res.redirect('/relaxation');
         });
 
     });
+
     app.get('/night/add-to-cart/:id', function (req, res) {
         var productId = req.params.id;
         var cart = new Cart(req.session.cart ? req.session.cart : {});
@@ -178,10 +181,12 @@ module.exports = function (app, passport) {
             cart.add(product, product.id);
             req.session.cart = cart;
             console.log(cart);
-            res.redirect('/');
+            res.redirect('/night');
         });
 
     });
+
+
 
     app.get('/profile', isLoggedIn, function (req, res) {
         if (!req.session.cart) {
@@ -190,6 +195,7 @@ module.exports = function (app, passport) {
         var cart = new Cart(req.session.cart);
         res.render('profile.hbs', {products: cart.generateArray(), totalPrice: cart.totalPrice});
     });
+
     app.get('/checkout', isLoggedIn, function (req, res) {
         if (!req.session.cart) {
             res.render('checkout.hbs', {products: null});
@@ -197,6 +203,7 @@ module.exports = function (app, passport) {
         var cart = new Cart(req.session.cart);
         res.render('checkout.hbs', {products: cart.generateArray(), totalPrice: cart.totalPrice});
     });
+
     app.post('/checkout',isLoggedIn, function (req,res) {
         var cart = new Cart(req.session.cart ? req.session.cart : {});
         var order =new Order({

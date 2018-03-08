@@ -45,7 +45,8 @@
         <!-- table head no need to loop-->
         <thead>
         <tr>
-            <th style="width:50%"></th>
+            <th style="width:20%">Product</th>
+            <th style="width:20%">Title</th>
             <th style="width:20%">Price</th>
             <th style="width:22%">Quantity</th>
 
@@ -57,7 +58,16 @@
             <!--loop here fro items-->
             {{# each products}}
                 <tr>
-                    <td data-th="Product"><img src="https://cdn2.iconfinder.com/data/icons/online-shopping-11/100/12-512.png"  style="height:80px;"></td>
+                    <td data-th="Product">
+                        <div class="card mb-4">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                    <img class="img-fluid"src="{{this.picture}}"alt="Card image cap">
+                                <div class="mask rgba-white-slight"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="Price">{{this.name}}</td>
                     <td data-th="Price">${{this.price}}</td>
                     <td data-th="Quantity">{{ this.qty}}</td>
 

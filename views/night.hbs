@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>adventure</title>
+    <title>Night</title>
 
 
 
@@ -54,11 +54,11 @@
 <body>
 
 <div class="page-header header-filter" data-parallax="true"
-     style=" background-image: url('assets/img/kit/adventure.jpg'); ">
+     style=" background-image: url('assets/img/kit/night.png'); ">
     <div class="container">
         <div class="row">
             <div class="col-md-6urban">
-                <h1 class="title">Adventure Junkies</h1>
+                <h1 class="title">Night life</h1>
 
             </div>
         </div>
@@ -68,7 +68,7 @@
 </div>
 <div class="main main-raisedurban">
     <div class="container">
-        {{# each products}}
+        {{# each night}}
             <!--First row-->
             <div class="row mt-5 wow">
                 <!--First column-->
@@ -79,7 +79,7 @@
                         <div class="card mb-r">
 
                             <!--Card image-->
-                            <img class="img-fluid" src="{{ this.imagePath}}" alt="Card image cap">
+                            <img class="img-fluidpacks" src="{{ this.imagePath}}" alt="Card image cap">
 
                             <!--Card content-->
                             <div class="card-body">
@@ -87,7 +87,7 @@
                                 <h4 class="card-title dark-grey-text"><strong>{{ this.title}}</strong></h4>
                                 <!--Text-->
 
-                                <p class="card-text">{{ this.description}}</p>
+                                <p class="card-text">Concierge price</p>
                                 <a class="pull-left">${{ this.price}}</a>
                                 <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
                             </div>

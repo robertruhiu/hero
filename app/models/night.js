@@ -1,12 +1,11 @@
 var mongoose = require('mongoose');
-var productSchema = mongoose.Schema;
+var nightSchema = mongoose.Schema;
 
-var product = new productSchema({
+var night = new nightSchema({
     imagePath: {type: String, required: true},
     title: {type: String, required: true},
-    description: {type: String, required: true},
     price: {type: String, required: true}
 });
 
 
-module.exports = mongoose.model('Product', product);
+module.exports = mongoose.model('Night', night);

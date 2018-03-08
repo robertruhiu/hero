@@ -68,7 +68,7 @@
 </div>
 <div class="main main-raisedurban">
     <div class="container">
-        {{# each products}}
+        {{# each adventure}}
             <!--First row-->
             <div class="row mt-5 wow">
                 <!--First column-->
@@ -86,8 +86,9 @@
                                 <!--Title-->
                                 <h4 class="card-title dark-grey-text"><strong>{{ this.title}}</strong></h4>
                                 <!--Text-->
-
-                                <p class="card-text">{{ this.description}}</p>
+                                <a href="/operator-profile">
+                                <p class="card-text">{{this.operatorname}}</p>
+                                </a>
                                 <a class="pull-left">${{ this.price}}</a>
                                 <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
                             </div>

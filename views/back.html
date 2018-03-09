@@ -1,109 +1,124 @@
 <html>
 <head>
-    <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
-<!------ Include the above in your HEAD tag ---------->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Account</title>
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Favicons -->
+
+    <link rel="icon" href="assets/img/kit/free/favicon.png">
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
 </head>
-<body>
-</body>
-
-
-
-
-
-<footer class="mainfooter" role="contentinfo">
-  <div class="footer-top p-y-2">
-    <div class="container-fluid">
-      <div class="row">
-
-        <div class="col-md-12">
-          <div class="footer-title text-xs-center">
-          <h4 class="p-b-1">Contact Us</h4>
+<nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
+    <div class="container ">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">AfrikaZiara </a>
         </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto pull-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Logout</a>
+                </li>
+            </ul>
         </div>
 
-      </div>
+
     </div>
-  </div>
-  <div class="footer-middle">
-  <div class="container">
+</nav>
+<body style="font-family: 'Open Sans', sans-serif;">
+<hr>
+<div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <!--Column1-->
-        <div class="footer-pad">
-          <h4>Address</h4>
-          <address>
-								<ul class="list-unstyled">
-									<li>
-                    City Hall<br>
-										212  Street<br>
-										Lawoma<br>
-										735<br>
-									</li>
-									<li>
-										Phone: 0
-									</li>
-								</ul>
-							</address>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <!--Column1-->
-        <div class="footer-pad">
-          <h4>Popular Services</h4>
-          <ul class="list-unstyled">
-            <li><a href="#"></a></li>
-            <li><a href="#">Payment Center</a></li>
-            <li><a href="#">Contact Directory</a></li>
-            <li><a href="#">Forms</a></li>
-            <li><a href="#">News and Updates</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <!--Column1-->
-        <div class="footer-pad">
-          <h4>Website Information</h4>
-          <ul class="list-unstyled">
-            <li><a href="#">Website Tutorial</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Disclaimer</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Webmaster</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <!--Column1-->
-        <div class="footer-pad">
-          <h4>Popular Departments</h4>
-          <ul class="list-unstyled">
-            <li><a href="#">Parks and Recreation</a></li>
-            <li><a href="#">Public Works</a></li>
-            <li><a href="#">Police Department</a></li>
-            <li><a href="#">Fire</a></li>
-            <li><a href="#">Mayor and City Council</a></li>
-            <li>
-              <a href="#"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <!--Footer Bottom-->
-          <p class="text-xs-center">&copy; Copyright 2016 - City of USA.  All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+        <div class="col-sm-6">
+            <div class="tab-content">
+                <div id="stripe" class="tab-pane fade in active">
+
+                    <form action="/checkout" method="post">
+                        <br>
+
+
+                        <div class='form-row'>
+
+                            <div class='form-group required'>
+                                <label class='control-label'>Full name</label>
+                                <input class='form-control' size='20' type='text' name="username">
+                            </div>
+
+
+                        </div>
+
+
+                        <div class='form-row'>
+                            <div class='form-group'>
+                                <label class='control-label'>Card Number</label>
+                                <input autocomplete='off' class='form-control card-number' size='20' type='text'>
+                            </div>
+                        </div>
+
+                        <div class='form-row'>
+                            <div class='form-group'>
+                                <label class='control-label'>address</label>
+                                <input autocomplete='off' class='form-control' size='20' type='text' name="address">
+                            </div>
+                        </div>
+
+                        <div class='form-row'>
+                            <div class='form-group cvc required'>
+                                <label class='control-label'>CVC</label>
+                                <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4'
+                                       type='text'>
+                            </div>
+                            <div class='form-group expiration required'>
+                                <label class='control-label'>Expiration</label>
+                                <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
+                            </div>
+                            <div class='form-group expiration required'>
+                                <label class='control-label'>Year</label>
+                                <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
+                            </div>
+                        </div>
+
+
+                                <button type="submit" class="btn btn-success">Buy now</button>
+
+                    </form>
+                    <div class='form-row'>
+                        <div class='form-group'>
+                        </div>
+                    </div>
+                            </div>    </div>
+
+
+</div>
+<div class="col-sm-6">
+    <label class='control-label'></label><!-- spacing -->
+
+    <div class="alert alert-info">
+    Please choose your method of payment and hit continue. You will then be sent down to pay using your selected
+    payment option.
+</div>
+<br>
+<div class="btn-group-vertical btn-block">
+    <a class="btn btn-default" style="text-align: left;" data-toggle="tab" href="#stripe">Stripe/Credit Card</a>
+    <a class="btn btn-default" style="text-align: left;" data-toggle="tab" href="#paypal">PayPal</a>
+</div>
+<div class="jumbotron jumbotron-flat">
+    {{# if products}}
+        <div class="center"><h2><i>BALANCE DUE:$        {{this.totalPrice}}</i></h2></div>
+    {{/if}}
+</div>
+</body>
 </html>

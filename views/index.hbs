@@ -10,11 +10,10 @@
 
 
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
-          type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/material-kit.css?v=2.0.2">
 
 
@@ -25,36 +24,32 @@
 <body>
 
 <nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
-    <div class="container ">
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="/">AfrikaZiara </a>
-        </div>
-
-        <div class="collapse navbar-collapse justify-content-xl-end " id="navbarNavDropdown">
-
-            <ul class="navbar-nav">
-                <div class="nav-item">
+    <a class="navbar-brand" href="/">AfrikaZiara </a>
+    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#NavDropdown">
+            ☰
+        </button>
+    <div class="collapse navbar-collapse justify-content-xl-end " id="NavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
                     <a class="nav-link" href="/profile">
                         Cart
                         {{session.cart.totalQty}}
                     </a>
-
-                </div>
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         Account
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="/login">login</a>
-                        <a class="dropdown-item" href="/signup">sign up</a>
+                    <div class="dropdown-menu" aria-labelledby="Preview">
+                        <a class="dropdown-item" href="/login">Login</a>
+                        <a class="dropdown-item" href="/signup">Sign up</a>
                     </div>
-                </div>
+                </li>
 
             </ul>
         </div>
 
-    </div>
+
 </nav>
 
 
@@ -67,7 +62,10 @@
         </div>
     </div>
 </div>
+
+
 <div class="main main-raised">
+
     <div class="card-group">
         <div class="card mb-4">
             <!--Card image-->
@@ -186,8 +184,9 @@
             <!--Card content-->
         </div>
     </div>
+
     <section class="text-center pb-3 my-5">
-        <!--Section heading-->
+
         <h3 class="h3">what we offer</h3>
         <div class="card-group">
             <div class="card mb-4">
@@ -257,6 +256,7 @@
     </div>
 
         <h3 class="h3">Places of interest</h3>
+
         <main>
             <!--Main layout-->
             <div class="container">
@@ -280,7 +280,7 @@
                                         <!--Text-->
 
                                         <p class="card-text">{{ this.description}}</p>
-                                        <a class="pull-left">${{ this.price}}</a>
+                                        <a class="text">${{ this.price}}</a>
                                         <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
                                     </div>
 
@@ -297,7 +297,9 @@
 
 
         </main>
+
         <h3 class="h3">tour operators</h3>
+
         <main>
             <!--Main layout-->
             <div class="container">
@@ -321,16 +323,16 @@
 
 
         </main>
+
         <br><br><br><br>
+
         <h2></h2>
 
     </section>
     <br>
-    <!--tour operators-->
+
 
 </div>
-
-
 
 
 
@@ -347,6 +349,24 @@
         }
     }
 </script>
+
+  <!--scripts loaded here-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+
+
+  <script>
+
+  </script>
+
+
+
+
+
+
 
 </body>
 

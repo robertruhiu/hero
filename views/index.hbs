@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Home</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112956681-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112956681-2');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7125816091691808",
+    enable_page_level_ads: true
+  });
+</script>
 
 
 <meta charset="utf-8">
@@ -23,7 +39,7 @@
 
 <body>
 
-<nav class="navbar fixed-top navbar-expand-lg">
+<nav class="navbar fixed-top navbar-expand-lg" color-on-scroll=100 id="sectionsNav">
     <a class="navbar-brand" href="/">AfrikaZiara </a>
     <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
             ☰
@@ -280,7 +296,7 @@
                                         <!--Text-->
 
                                         <p class="card-text">{{ this.description}}</p>
-                                        <a>${{ this.price}}</a>
+                                        <a class="text">${{ this.price}}</a>
                                         <a href="/add-to-cart/{{this._id}}" class="btn btn-primary btn-md pull-right">Book</a>
                                     </div>
 
@@ -334,9 +350,7 @@
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

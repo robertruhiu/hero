@@ -1,124 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Account</title>
-
-    <!-- Favicons -->
-
-    <link rel="icon" href="assets/img/kit/free/favicon.png">
-
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-<nav class="navbar fixed-top navbar-expand-lg   topnav" color-on-scroll=100 id="sectionsNav">
-    <div class="container ">
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="/">AfrikaZiara </a>
-        </div>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto pull-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/profile">Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Logout</a>
-                </li>
-            </ul>
-        </div>
+<body>
 
-
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Hidden brand</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
 </nav>
-<body style="font-family: 'Open Sans', sans-serif;">
-<hr>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="tab-content">
-                <div id="stripe" class="tab-pane fade in active">
-
-                    <form action="/checkout" method="post">
-                        <br>
-
-
-                        <div class='form-row'>
-
-                            <div class='form-group required'>
-                                <label class='control-label'>Full name</label>
-                                <input class='form-control' size='20' type='text' name="username">
-                            </div>
-
-
-                        </div>
-
-
-                        <div class='form-row'>
-                            <div class='form-group'>
-                                <label class='control-label'>Card Number</label>
-                                <input autocomplete='off' class='form-control card-number' size='20' type='text'>
-                            </div>
-                        </div>
-
-                        <div class='form-row'>
-                            <div class='form-group'>
-                                <label class='control-label'>address</label>
-                                <input autocomplete='off' class='form-control' size='20' type='text' name="address">
-                            </div>
-                        </div>
-
-                        <div class='form-row'>
-                            <div class='form-group cvc required'>
-                                <label class='control-label'>CVC</label>
-                                <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4'
-                                       type='text'>
-                            </div>
-                            <div class='form-group expiration required'>
-                                <label class='control-label'>Expiration</label>
-                                <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
-                            </div>
-                            <div class='form-group expiration required'>
-                                <label class='control-label'>Year</label>
-                                <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
-                            </div>
-                        </div>
-
-
-                                <button type="submit" class="btn btn-success">Buy now</button>
-
-                    </form>
-                    <div class='form-row'>
-                        <div class='form-group'>
-                        </div>
-                    </div>
-                            </div>    </div>
-
-
-</div>
-<div class="col-sm-6">
-    <label class='control-label'></label><!-- spacing -->
-
-    <div class="alert alert-info">
-    Please choose your method of payment and hit continue. You will then be sent down to pay using your selected
-    payment option.
-</div>
 <br>
-<div class="btn-group-vertical btn-block">
-    <a class="btn btn-default" style="text-align: left;" data-toggle="tab" href="#stripe">Stripe/Credit Card</a>
-    <a class="btn btn-default" style="text-align: left;" data-toggle="tab" href="#paypal">PayPal</a>
-</div>
-<div class="jumbotron jumbotron-flat">
-    {{# if products}}
-        <div class="center"><h2><i>BALANCE DUE:$        {{this.totalPrice}}</i></h2></div>
-    {{/if}}
-</div>
+
 </body>
 </html>
+
+

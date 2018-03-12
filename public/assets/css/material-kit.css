@@ -4408,6 +4408,7 @@ tbody.collapse.show {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+    padding-left: 3rem;
 }
 
 .navbar-brand:hover,
@@ -4424,7 +4425,7 @@ tbody.collapse.show {
 }
 
 .navbar-nav .nav-link {
-    padding-right: 0;
+    padding-right: 2rem;
     padding-left: 0;
 }
 
@@ -14868,6 +14869,7 @@ textarea {
     padding: 0.5321rem;
     font-size: 0.875rem;
     font-weight: 400;
+    padding-right: 2rem;
 }
 
 .nav-tabs,
@@ -15029,6 +15031,7 @@ textarea {
     font-size: 1.125rem;
     line-height: 30px;
     padding: 0.625rem 0;
+    padding-left: 3rem;
 }
 
 .navbar > .container {
@@ -18136,6 +18139,7 @@ footer .pull-center {
         height: 1px;
         margin-left: 15px;
         background-color: #e5e5e5;
+        padding-right: 2rem;
     }
 
     .navbar-collapse .navbar-nav .nav-item:last-child:after {

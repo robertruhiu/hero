@@ -15207,8 +15207,8 @@ textarea {
 .alert {
     border: 0;
     border-radius: 0;
-    padding: 20px 15px;
-    line-height: 20px;
+    padding: 5px 15px;
+
 }
 
 .alert b {
@@ -15251,8 +15251,8 @@ textarea {
 }
 
 .alert.alert-success {
-    background-color: #55b559;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #5c69ff;
 }
 
 .alert.alert-success a,
@@ -15261,8 +15261,8 @@ textarea {
 }
 
 .alert.alert-info {
-    background-color: #00cae3;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #6e7cff;
 }
 
 .alert.alert-info a,

@@ -6,17 +6,20 @@ var Relaxation = require('../app/models/relaxation');
 var Urban = require('../app/models/urban');
 var Adventure = require('../app/models/adventure');
 var Order =require('../app/models/orders');
+var flash = require('connect-flash');
 
 module.exports = function (app, passport) {
 
     app.get('/', function (req, res) {
+        var successMsg = req.flash('success')[0];
+        var cartMsg = req.flash('cartadd')[0];
         Ofinterest.find({}, function (err, docs) {
             var productChunks = [];
             var chunkSize = 3;
             for (var i = 0; i < docs.length; i += chunkSize) {
                 productChunks.push(docs.slice(i, i + chunkSize));
             }
-            res.render('index.hbs', {ofinterest: productChunks});
+            res.render('index.hbs', {ofinterest: productChunks,successMsg:successMsg,noMessages: !successMsg,cartMsg:cartMsg,noMessages:!cartMsg});
         });
     });
 
@@ -116,6 +119,7 @@ module.exports = function (app, passport) {
             }
             cart.add(product, product.id);
             req.session.cart = cart;
+            req.flash('cartadd','added to cart');
             console.log(cart);
             res.redirect('/');
         });

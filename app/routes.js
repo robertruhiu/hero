@@ -225,6 +225,36 @@ module.exports = function (app, passport) {
 
     });
 
+    // end points for api
+    app.get('/orders',function (req,res) {
+        Order.find({}, function(err, docs) {
+            if(!err) {
+                res.json(200, { orders: docs });
+            } else {
+                res.json(500, { message: err });
+            }
+        });
+    });
+    app.get('/users',function (req,res) {
+        User.find({}, function(err, docs) {
+            if(!err) {
+                res.json(200, { users: docs });
+            } else {
+                res.json(500, { message: err });
+            }
+        });
+    });
+    app.get('/ofinterest',function (req,res) {
+        Ofinterest.find({}, function(err, docs) {
+            if(!err) {
+                res.json(200, { ofinterest: docs });
+            } else {
+                res.json(500, { message: err });
+            }
+        });
+    });
+
+
 };
 
 function isLoggedIn(req, res, next) {
